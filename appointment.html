@@ -40,6 +40,9 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
@@ -150,10 +153,18 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
+                            <div class="alert alert-success" id="appoitmentBookedAlert" style="display: none;" role="alert">
+                                <b>Thank you! Our executive will get in touch with you</b>
+                              </div>
+                              <div class="alert alert-danger" id="unableToBook" style="display: none;" role="alert">
+                                <b>Sorry! unable to book now call +91 96631 55222 book</b>
+                              </div>
+                        </div>
+                        <div class="col-md-12">
                             <h3>Call and book an appointment <i class="optico-icon-mobile"></i> +91 96631 55222 or</h3>
                             <p>Book below & our executive will get in touch with you</p>
                             <div class="contact-form">
-                                <form>
+                                <form id="appoitmentForm">
                                     <div class="form-row">
                                         <div class="form-group col-lg-6">
                                             <input id="name" type="text" class="form-control" placeholder="Your Name" name="Your-Name">
@@ -322,6 +333,10 @@
     <script src="js/jquery.twentytwenty.js"></script>
     <!-- Scripts JS -->
     <script src="js/scripts.js"></script>
+    <!-- base constants-->
+    <script src="./js/baseConstants.js"></script>
+    <!-- send mail -->
+    <script src="./js/sendMail.js"></script>
 </body>
 
 </html>

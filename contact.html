@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -221,7 +223,17 @@
                             <h3>Please call +18003838890 if urgent</h3>
                             <p>your personal case manager will ensure thate you receive the best possible care</p>
                             <div class="contact-form">
-                                <form>
+                                <form id="appoitmentForm">
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <div class="alert alert-success" id="appoitmentBookedAlert" style="display: none;" role="alert">
+                                                <b>Thank you! Our executive will get in touch with you</b>
+                                            </div>
+                                            <div class="alert alert-danger" id="unableToBook" style="display: none;" role="alert">
+                                                <b>Sorry! unable to book now call +91 96631 55222 book</b>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="form-row">
                                         <div class="form-group col-lg-6">
                                             <input id="name" type="text" class="form-control" placeholder="Your Name" name="Your-Name">
@@ -232,14 +244,8 @@
                                         <div class="form-group col-lg-6">
                                             <input id="phone" type="text" class="form-control" placeholder="Your Phone" name="your-phone">
                                         </div>
-                                        <div class="form-group col-lg-6">
-                                            <input id="subject" type="text" class="form-control" placeholder="subject" name="subject">
-                                        </div>
                                         <div class="form-group col-lg-12">
-                                            <textarea id="comment" class="form-control" placeholder="Message" name="message" cols="45" rows="5" aria-required="true"></textarea>
-                                        </div>
-                                        <div class="form-group col-lg-12">
-                                            <a href="#" class="btn">SEND MESSAGE</a>
+                                            <input type="submit" value="Book appointment" class="btn"/>
                                         </div>
                                     </div>
                                 </form>
@@ -414,6 +420,10 @@
     <script src="js/jquery.twentytwenty.js"></script>
     <!-- Scripts JS -->
     <script src="js/scripts.js"></script>
+    <!-- base constants-->
+    <script src="./js/baseConstants.js"></script>
+    <!-- send mail -->
+    <script src="./js/sendMail.js"></script>
 </body>
 
 </html>
